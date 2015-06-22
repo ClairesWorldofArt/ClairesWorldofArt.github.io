@@ -1,20 +1,28 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Claire&#39;s World Of Art</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type='text/javascript'>//<![CDATA[ 
+        window.onload=function(){
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+        }//]]>
+</script>
+</head>
+<body>
+<h1 class="fancy">Claire`s World Of Art</h1>
+<div>
+    <nav class="roundnav">{% assign pages = site.pages | sort: 'priority' %}
+        <ul>{% for page in pages %}{% if page.title %}
+            <li><a href="{{ page.url | prepend: site.base_url }}">{{ page.title }}</a></li>
+        {% endif %}{% endfor %}</ul>
+    </nav></div>
+<main>
+{{ content }}
+&nbsp;
+</main>
+<div class="bfly">&nbsp;</div>  
+</body>
 </html>
+

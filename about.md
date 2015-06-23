@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 'About'
+titlebar: 'About the artist'
 permalink: '/about/'
 priority: 2
 ---

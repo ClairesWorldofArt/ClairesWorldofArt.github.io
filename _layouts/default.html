@@ -15,7 +15,7 @@
 <div>
     <nav class="roundnav">{% assign pages = site.pages | sort: 'priority' %}
         <ul>{% for page in pages %}{% if page.title %}
-            <li><a href="{{ page.url | prepend: site.base_url }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.url | prepend: site.base_url }}" title="{% if page.titlebar %}{{ page.titlebar }}{% elsif page.title %}{{ page.title }}{% endif %}">{{ page.title }}</a></li>
         {% endif %}{% endfor %}</ul>
     </nav></div>
 <main>
